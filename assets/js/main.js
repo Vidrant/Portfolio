@@ -92,13 +92,15 @@
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const narrow = w < 760;
-      // On phones the copy fills most of the hero, so the field lives in the band above it.
+      // On phones the copy fills most of the hero, so the field lives in the band
+      // between the fig. caption and the copy, measured from the real layout.
       const inner = $('.hero__inner', hero);
-      const bandTop = narrow ? 130 : 0;
-      const bandH = narrow ? Math.max(160, inner.offsetTop - 24 - bandTop) : h;
-      // [cx, cy, sx, sy, weight] relative to the band; kept clear of the bottom-left text block
+      const fig = $('.hero__fig', hero);
+      const bandTop = narrow ? fig.offsetTop + fig.offsetHeight + 18 : 0;
+      const bandH = narrow ? Math.max(120, inner.offsetTop - 18 - bandTop) : h;
+      // [cx, cy, sx, sy, weight] relative to the band; kept clear of the text and the outlier label
       const clusters = narrow
-        ? [[.30, .28, .1, .12, 3], [.76, .18, .08, .1, 3], [.62, .62, .07, .09, 2], [.92, .55, .04, .08, 1]]
+        ? [[.30, .26, .1, .11, 3], [.76, .2, .08, .1, 3], [.66, .5, .06, .08, 2], [.93, .38, .035, .07, 1]]
         : [[.62, .30, .075, .085, 5], [.81, .52, .06, .07, 4], [.47, .16, .05, .04, 2], [.91, .21, .04, .05, 2], [.73, .70, .045, .035, 1], [.16, .16, .05, .035, 1], [.96, .82, .025, .03, .5]];
       const total = clusters.reduce((a, c) => a + c[4], 0);
       const n = narrow ? 480 : clamp(Math.round((w * h) / 1000), 700, 1400);
@@ -125,7 +127,8 @@
         });
       }
       out = narrow
-        ? { x: .1 * w, y: bandTop + bandH - 44 }
+        // low enough to sit apart from the clusters, high enough that the pulse ring clears the eyebrow
+        ? { x: .1 * w, y: bandTop + bandH - 36 }
         : { x: .34 * w, y: Math.min(.36 * h, inner.offsetTop - 70) };
       if (label) {
         label.style.setProperty('--ox', `${out.x - 14}px`);
@@ -234,7 +237,9 @@
     layout();
     startLoop();
     setTimeout(() => label && label.classList.add('is-on'), reduce ? 0 : 1900);
-    if (document.fonts) document.fonts.ready.then(() => reduce && startLoop());
+    // web fonts change the copy's height, so re-measure the band once they arrive
+    // (the seeded rng regenerates the same points, so this is seamless)
+    if (document.fonts) document.fonts.ready.then(() => { layout(); if (reduce) startLoop(); });
 
     let lastW = w, lastH = h, resizeTimer;
     addEventListener('resize', () => {

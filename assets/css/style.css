@@ -785,6 +785,12 @@ main:focus { outline: none; }
   .record__main { grid-column: 1 / -1; grid-row: 2; }
 }
 
+/* matches the narrow field layout in main.js (w < 760): reserve a band
+   above the copy for the scatter field, even on short phones */
+@media (max-width: 759px) {
+  .hero { padding-top: calc(var(--nav-h) + 230px); }
+}
+
 @media (max-width: 640px) {
   .nav__name { display: none; }
   .nav__cta-long { display: none; }
@@ -793,6 +799,7 @@ main:focus { outline: none; }
   .hero__title { font-size: clamp(3.6rem, 21vw, 7rem); }
   .hero__fig { left: var(--gutter); right: auto; text-align: left; }
   .hero__meta { grid-template-columns: 1fr; }
+  .hero__meta div:not(:first-child) { display: none; }
   .hero__actions { gap: 22px; }
 
   .voice { grid-template-columns: 1fr; }
