@@ -1,26 +1,448 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>HTML Portfolio Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rohit Baid — AI &amp; Data Science</title>
+  <meta name="description" content="Rohit Baid is an AI &amp; Data Science engineering student in Mumbai who builds LLM assistants and data-analysis tools in Python.">
+  <meta name="theme-color" content="#EFEBE3">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rohit Baid — AI &amp; Data Science">
+  <meta property="og:description" content="Tools that read data and talk back. LLM assistants, analytics apps and experiments by Rohit Baid.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-    <h1>Rohit Baid's Portfolio</h1>
-    <h2>I'm a Web Developer</h2>
-    <hr>
-    <a href="./public/movie ranking.html"><h2>Movie Ranking Project</h2></a>
-    <img src="./assets/images/p1.png" alt="Img of movie ranking project">
+  <a class="skip" href="#main">Skip to content</a>
 
-    <a href="./public/birthday invite.html"><h2>Birthday Invite Project</h2></a>
-    <img src="./assets/images/p2.png" alt="Img of Birthday Invite project">
-    <hr>
-    <a href="./public/about.html">About Me</a>
-    <a href="./public/contact.html">Contact Me</a>
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-nav>
+    <a class="nav__mark" href="#top" aria-label="Rohit Baid, back to top">
+      <span class="mark">rb</span>
+      <span class="nav__name">Rohit Baid</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#archive">Archive</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#record">Record</a>
+    </nav>
+    <a class="nav__cta" href="#contact"><span class="dot" aria-hidden="true"></span><span class="nav__cta-long">Open to internships</span><span class="nav__cta-short">Contact</span></a>
+  </header>
+
+  <!-- second-read: vertical side rail -->
+  <aside class="rail mono" aria-hidden="true">
+    <span>19.0760° N — 72.8777° E</span>
+    <span>Mumbai <b data-time>--:--</b></span>
+    <span>rows read <b data-rows>0000</b> / 1000</span>
+  </aside>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============ §00 HERO ============ -->
+    <section class="hero" id="top">
+      <canvas class="hero__field" data-field aria-hidden="true"></canvas>
+      <div class="outlier mono" data-outlier aria-hidden="true">
+        <span class="outlier__line"></span>
+        <span class="outlier__tag">anomaly_score <b>0.97</b></span>
+        <span class="outlier__id">row 0001 · rohit_baid</span>
+      </div>
+      <p class="hero__fig mono" data-fade>fig. 01 — <span data-count>1,200</span> observations, 1 outlier<span class="hero__hint"> · hover to query neighbours</span></p>
+
+      <div class="hero__inner">
+        <p class="eyebrow mono" data-fade>Portfolio — 2026 — Mumbai</p>
+        <h1 class="hero__title" data-split>Rohit <em>Baid</em></h1>
+        <div class="hero__foot">
+          <div class="hero__copy">
+            <p class="hero__lede" data-fade>AI &amp; Data Science engineer in the making. I build tools that <em>read data</em> and <em>talk back</em>, from anomaly-hunting analytics apps to voice-driven LLM assistants.</p>
+            <div class="hero__actions" data-fade>
+              <a class="btn btn--primary" href="#work">
+                Selected work
+                <span class="btn__arr" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg></span>
+              </a>
+              <a class="link-arrow" href="assets/Rohit_Baid_Resume.pdf" target="_blank" rel="noopener">Résumé, PDF <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></a>
+            </div>
+          </div>
+          <dl class="hero__meta mono" data-fade>
+            <div><dt>Studying</dt><dd>B.E. AI &amp; Data Science · Mumbai University</dd></div>
+            <div><dt>Focus</dt><dd>LLMs · data analysis · GenAI</dd></div>
+            <div><dt>Local time</dt><dd>Mumbai, <span data-time>--:--</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ §01 PROFILE ============ -->
+    <section class="section profile" id="profile">
+      <header class="section__head mono" data-reveal><span class="idx">§01</span><span>Profile</span></header>
+      <div class="profile__grid">
+        <p class="profile__statement" data-scrub>I work where <em>Python</em> meets <em>language models</em>: profiling messy datasets, wiring LLMs to real tools like search and speech, and shipping the result as something people can actually click.</p>
+
+        <figure class="profile__table" data-reveal>
+          <figcaption class="mono"><span>df.describe(include="all")</span><span>rohit_baid.csv</span></figcaption>
+          <table>
+            <thead><tr><th scope="col">column</th><th scope="col">dtype</th><th scope="col">value</th></tr></thead>
+            <tbody>
+              <tr><td>name</td><td>object</td><td>Rohit Baid</td></tr>
+              <tr><td>based_in</td><td>geo</td><td>Mumbai, India</td></tr>
+              <tr><td>degree</td><td>category</td><td>B.E., AI &amp; Data Science</td></tr>
+              <tr><td>university</td><td>category</td><td>Mumbai University</td></tr>
+              <tr><td>enrolled</td><td>datetime64</td><td>2024-09</td></tr>
+              <tr><td>languages</td><td>list[str]</td><td>Python, SQL</td></tr>
+              <tr><td>focus</td><td>list[str]</td><td>LLMs, data analysis, GenAI</td></tr>
+              <tr><td>open_to_work</td><td>bool</td><td><span class="bool">True</span></td></tr>
+            </tbody>
+          </table>
+          <p class="profile__note mono">8 columns · 0 missing · 1 anomaly (intentional). Profiled in the style of <a href="https://smart-data-analyst-vidrant.streamlit.app/" target="_blank" rel="noopener">smart-data-analyst ↗</a></p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ §02 SELECTED WORK ============ -->
+    <section class="section work" id="work">
+      <header class="section__head mono" data-reveal><span class="idx">§02</span><span>Selected work</span></header>
+      <div class="work__head">
+        <h2 class="display" data-reveal>Four builds, <em>one habit:</em><br>make data useful.</h2>
+        <p class="work__count mono" data-reveal>04 projects<br>2025 → 2026</p>
+      </div>
+
+      <div class="stack">
+
+        <!-- 01 · Smart Data Analyst -->
+        <article class="card card--night card--a" data-card style="--i:0">
+          <div class="card__visual">
+            <div class="dash mono" aria-label="Illustration of the Smart Data Analyst anomaly view" role="img">
+              <div class="dash__bar"><span>smart-data-analyst</span><span class="dash__file">sales_2026.xlsx — 4,812 × 9</span><span class="dash__ok"><i></i>profiled</span></div>
+              <div class="dash__tabs"><span>Profile</span><span>EDA</span><span>Correlation</span><span class="is-on">Anomalies</span><span>Export</span></div>
+              <div class="dash__body">
+                <div class="dash__plot">
+                  <span class="dash__label">Isolation Forest · contamination 0.02</span>
+                  <svg data-scatter viewBox="0 0 400 310" preserveAspectRatio="xMidYMid meet"></svg>
+                </div>
+                <div class="dash__side">
+                  <div class="dash__kv">
+                    <div><span>rows</span><b>4,812</b></div>
+                    <div><span>missing</span><b>0.4%</b></div>
+                    <div><span>duplicates</span><b>12</b></div>
+                    <div><span>anomalies</span><b class="acc">37</b></div>
+                  </div>
+                  <div class="dash__mini"><span>revenue · distribution</span><svg data-hist viewBox="0 0 200 64" preserveAspectRatio="none"></svg></div>
+                  <div class="dash__mini"><span>pearson · 5 × 5</span><div class="dash__heat" data-heat></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__meta">
+            <span class="card__no mono">01 / 04 — analytics app</span>
+            <div>
+              <h3 class="card__title">Smart Data <em>Analyst</em></h3>
+              <p class="card__desc">Drop in any CSV or Excel file and get a full exploratory pass: column profiling, quality checks, interactive charts, three flavours of correlation and Isolation Forest anomaly detection. Then export the cleaned data with a Markdown report.</p>
+              <ul class="tags mono"><li>Python</li><li>Streamlit</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Plotly</li></ul>
+              <div class="card__links">
+                <a class="btn btn--light" href="https://smart-data-analyst-vidrant.streamlit.app/" target="_blank" rel="noopener">Open live app <span class="btn__arr" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></span></a>
+                <a class="link-arrow" href="https://github.com/Vidrant/smart-data-analyst" target="_blank" rel="noopener">Source <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 · AI Virtual Assistant -->
+        <article class="card card--sand card--b" data-card style="--i:1">
+          <div class="card__meta">
+            <div class="card__head">
+              <span class="card__no mono">02 / 04 — voice assistant</span>
+              <h3 class="card__title">AI Virtual <em>Assistant</em></h3>
+            </div>
+            <div class="card__body">
+              <p class="card__desc">A conversational assistant you can talk to. Groq-powered answers, live web search, date and time lookups and sandboxed maths, with local Whisper speech-to-text in and browser text-to-speech out. One command starts it, and each session keeps its own history.</p>
+              <ul class="tags mono"><li>Python</li><li>FastAPI</li><li>React</li><li>Vite</li><li>Groq API</li><li>Faster-Whisper</li><li>RAG</li></ul>
+              <p class="card__aside mono">Source available on request</p>
+            </div>
+          </div>
+          <div class="card__visual">
+            <div class="voice" role="img" aria-label="Illustration of a voice conversation with the assistant">
+              <div class="voice__stage">
+                <span class="voice__state mono"><i></i>listening · faster-whisper (local)</span>
+                <div class="voice__wave" data-wave></div>
+                <div class="voice__mic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></div>
+              </div>
+              <div class="voice__log mono">
+                <p class="msg msg--you">What's 18% of 2,450?</p>
+                <p class="msg msg--tool">tool · safe_calc</p>
+                <p class="msg msg--bot">That's <b>441</b>. Worked out in a sandbox, no eval().</p>
+                <p class="msg msg--you">And what's the date today?</p>
+                <p class="msg msg--tool">tool · datetime</p>
+                <p class="msg msg--bot">Speaking it out loud now…</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 · Attendance Tracker -->
+        <article class="card card--accent card--c" data-card style="--i:2">
+          <div class="card__meta">
+            <span class="card__no mono">03 / 04 — REST + DevOps</span>
+            <div>
+              <h3 class="card__title">Attendance <em>Tracker</em></h3>
+              <p class="card__desc">A small Flask REST service (<code>/items</code>, <code>/health</code>) wrapped in a full delivery pipeline: pytest on every push via GitHub Actions, a Docker image, and a Compose stack with Prometheus, Node Exporter and Grafana watching it run.</p>
+              <ul class="tags mono"><li>Flask</li><li>pytest</li><li>GitHub Actions</li><li>Docker</li><li>Prometheus</li><li>Grafana</li></ul>
+              <div class="card__links">
+                <a class="btn btn--primary" href="https://github.com/Vidrant/attendance-tracker" target="_blank" rel="noopener">View repository <span class="btn__arr" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="card__visual">
+            <div class="pipe mono" data-pipe role="img" aria-label="Illustration of the CI pipeline and monitoring stack">
+              <div class="pipe__head"><span>.github/workflows/ci.yml</span><span>on: push → main, feature/**</span></div>
+              <ol class="pipe__steps">
+                <li style="--i:0"><i></i>actions/checkout@v4<span>1s</span></li>
+                <li style="--i:1"><i></i>setup-python · 3.11<span>4s</span></li>
+                <li style="--i:2"><i></i>pip install -r requirements.txt<span>9s</span></li>
+                <li style="--i:3"><i></i>pytest<span class="pass">passed</span></li>
+                <li style="--i:4"><i></i>docker compose up -d<span>up</span></li>
+              </ol>
+              <div class="pipe__services">
+                <div><i></i>attendance-app<span>:5000</span></div>
+                <div><i></i>prometheus<span>:9090</span></div>
+                <div><i></i>grafana<span>:3000</span></div>
+                <div><i></i>node-exporter<span>:9100</span></div>
+              </div>
+              <div class="pipe__graph">
+                <span>GET /items — req/s</span>
+                <svg data-spark viewBox="0 0 300 64" preserveAspectRatio="none"></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 · UPI QR -->
+        <article class="card card--light card--d" data-card style="--i:3">
+          <div class="card__visual">
+            <div class="qr">
+              <figure class="qr__code">
+                <svg viewBox="-4 -4 41 41" role="img" aria-label="QR code linking to the UPI QR generator repository">
+                  <rect x="-4" y="-4" width="41" height="41" fill="#fff"/>
+                  <path d="M8 0h2v1h-2zM11 0h1v1h-1zM15 0h2v1h-2zM18 0h4v1h-4zM23 0h1v1h-1zM8 1h2v1h-2zM11 1h1v1h-1zM14 1h1v1h-1zM22 1h3v1h-3zM9 2h6v1h-6zM16 2h1v1h-1zM19 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM8 3h3v1h-3zM12 3h1v1h-1zM15 3h1v1h-1zM17 3h1v1h-1zM19 3h2v1h-2zM22 3h1v1h-1zM24 3h1v1h-1zM9 4h1v1h-1zM11 4h3v1h-3zM16 4h2v1h-2zM19 4h1v1h-1zM24 4h1v1h-1zM9 5h1v1h-1zM13 5h1v1h-1zM15 5h2v1h-2zM18 5h5v1h-5zM24 5h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM8 7h2v1h-2zM11 7h2v1h-2zM15 7h3v1h-3zM24 7h1v1h-1zM0 8h1v1h-1zM2 8h2v1h-2zM5 8h3v1h-3zM13 8h3v1h-3zM17 8h3v1h-3zM21 8h4v1h-4zM26 8h1v1h-1zM29 8h1v1h-1zM31 8h2v1h-2zM0 9h1v1h-1zM4 9h2v1h-2zM10 9h1v1h-1zM13 9h4v1h-4zM19 9h3v1h-3zM23 9h1v1h-1zM26 9h2v1h-2zM29 9h4v1h-4zM3 10h2v1h-2zM6 10h2v1h-2zM9 10h2v1h-2zM12 10h2v1h-2zM16 10h2v1h-2zM20 10h1v1h-1zM22 10h2v1h-2zM25 10h1v1h-1zM27 10h3v1h-3zM31 10h2v1h-2zM2 11h2v1h-2zM5 11h1v1h-1zM8 11h1v1h-1zM10 11h3v1h-3zM18 11h1v1h-1zM20 11h1v1h-1zM26 11h2v1h-2zM29 11h1v1h-1zM1 12h1v1h-1zM6 12h2v1h-2zM10 12h2v1h-2zM14 12h4v1h-4zM21 12h5v1h-5zM29 12h1v1h-1zM1 13h1v1h-1zM4 13h2v1h-2zM8 13h1v1h-1zM10 13h1v1h-1zM12 13h3v1h-3zM17 13h3v1h-3zM21 13h2v1h-2zM24 13h4v1h-4zM29 13h3v1h-3zM0 14h2v1h-2zM3 14h1v1h-1zM6 14h1v1h-1zM10 14h2v1h-2zM13 14h1v1h-1zM17 14h1v1h-1zM19 14h1v1h-1zM21 14h1v1h-1zM24 14h1v1h-1zM26 14h1v1h-1zM28 14h2v1h-2zM0 15h1v1h-1zM2 15h2v1h-2zM5 15h1v1h-1zM8 15h2v1h-2zM12 15h4v1h-4zM18 15h4v1h-4zM23 15h4v1h-4zM29 15h2v1h-2zM0 16h1v1h-1zM2 16h2v1h-2zM6 16h1v1h-1zM9 16h1v1h-1zM11 16h3v1h-3zM16 16h1v1h-1zM18 16h2v1h-2zM21 16h3v1h-3zM25 16h2v1h-2zM28 16h3v1h-3zM1 17h5v1h-5zM7 17h1v1h-1zM12 17h1v1h-1zM14 17h1v1h-1zM19 17h8v1h-8zM28 17h2v1h-2zM31 17h2v1h-2zM2 18h1v1h-1zM6 18h5v1h-5zM12 18h2v1h-2zM15 18h2v1h-2zM20 18h1v1h-1zM22 18h1v1h-1zM24 18h1v1h-1zM27 18h2v1h-2zM30 18h2v1h-2zM0 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM10 19h1v1h-1zM13 19h5v1h-5zM19 19h1v1h-1zM22 19h5v1h-5zM28 19h1v1h-1zM32 19h1v1h-1zM3 20h1v1h-1zM5 20h4v1h-4zM12 20h1v1h-1zM15 20h4v1h-4zM21 20h1v1h-1zM27 20h1v1h-1zM29 20h3v1h-3zM0 21h1v1h-1zM4 21h1v1h-1zM7 21h2v1h-2zM10 21h1v1h-1zM12 21h5v1h-5zM18 21h4v1h-4zM23 21h1v1h-1zM25 21h1v1h-1zM29 21h1v1h-1zM32 21h1v1h-1zM2 22h1v1h-1zM5 22h3v1h-3zM11 22h5v1h-5zM17 22h1v1h-1zM20 22h2v1h-2zM23 22h4v1h-4zM28 22h1v1h-1zM31 22h2v1h-2zM1 23h2v1h-2zM4 23h1v1h-1zM7 23h2v1h-2zM10 23h2v1h-2zM15 23h1v1h-1zM18 23h1v1h-1zM20 23h1v1h-1zM23 23h2v1h-2zM26 23h2v1h-2zM29 23h1v1h-1zM0 24h1v1h-1zM3 24h2v1h-2zM6 24h1v1h-1zM8 24h2v1h-2zM11 24h2v1h-2zM17 24h1v1h-1zM19 24h1v1h-1zM22 24h7v1h-7zM32 24h1v1h-1zM8 25h3v1h-3zM12 25h2v1h-2zM15 25h1v1h-1zM19 25h2v1h-2zM24 25h1v1h-1zM28 25h2v1h-2zM31 25h2v1h-2zM8 26h3v1h-3zM13 26h1v1h-1zM16 26h6v1h-6zM23 26h2v1h-2zM26 26h1v1h-1zM28 26h1v1h-1zM8 27h1v1h-1zM11 27h1v1h-1zM13 27h4v1h-4zM20 27h5v1h-5zM28 27h5v1h-5zM9 28h2v1h-2zM18 28h11v1h-11zM30 28h2v1h-2zM8 29h3v1h-3zM12 29h1v1h-1zM16 29h3v1h-3zM20 29h4v1h-4zM27 29h1v1h-1zM29 29h1v1h-1zM32 29h1v1h-1zM8 30h1v1h-1zM12 30h4v1h-4zM17 30h1v1h-1zM20 30h1v1h-1zM22 30h1v1h-1zM26 30h2v1h-2zM29 30h2v1h-2zM11 31h2v1h-2zM15 31h1v1h-1zM17 31h1v1h-1zM22 31h1v1h-1zM26 31h3v1h-3zM32 31h1v1h-1zM8 32h3v1h-3zM12 32h1v1h-1zM17 32h3v1h-3zM21 32h1v1h-1zM23 32h1v1h-1zM25 32h2v1h-2zM28 32h1v1h-1zM30 32h1v1h-1z" fill="#141412"/>
+                  <rect x="0.5" y="0.5" width="6" height="6" rx="1" fill="none" stroke="#141412" stroke-width="1"/><rect x="2" y="2" width="3" height="3" rx=".5" fill="#141412"/><rect x="26.5" y="0.5" width="6" height="6" rx="1" fill="none" stroke="#141412" stroke-width="1"/><rect x="28" y="2" width="3" height="3" rx=".5" fill="#141412"/><rect x="0.5" y="26.5" width="6" height="6" rx="1" fill="none" stroke="#141412" stroke-width="1"/><rect x="2" y="28" width="3" height="3" rx=".5" fill="#141412"/>
+                </svg>
+                <figcaption class="mono">Scan me: it opens the repo, not a payment.</figcaption>
+              </figure>
+              <div class="qr__anatomy mono">
+                <p class="qr__link">
+                  <span class="ln"><span class="dim">upi://pay?</span></span>
+                  <span class="ln"><b class="p1">pa=</b>name@bank</span>
+                  <span class="ln"><span class="dim">&amp;</span><b class="p2">pn=</b>Rohit</span>
+                  <span class="ln"><span class="dim">&amp;</span><b class="p3">am=</b>250.00</span>
+                  <span class="ln"><span class="dim">&amp;</span><b class="p4">cu=</b>INR</span>
+                  <span class="ln"><span class="dim">&amp;</span><b class="p5">tn=</b>chai</span>
+                </p>
+                <dl>
+                  <div><dt class="p1">pa</dt><dd>payee UPI ID, validated as name@bank</dd></div>
+                  <div><dt class="p2">pn</dt><dd>name shown to the payer</dd></div>
+                  <div><dt class="p3">am</dt><dd>amount, must be positive</dd></div>
+                  <div><dt class="p4">cu</dt><dd>currency code</dd></div>
+                  <div><dt class="p5">tn</dt><dd>optional note</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="card__meta">
+            <span class="card__no mono">04 / 04 — python tool</span>
+            <div>
+              <h3 class="card__title">UPI QR <em>Generator</em></h3>
+              <p class="card__desc">Builds a standard <code>upi://pay</code> deep link from validated input and encodes it as a scannable PNG. One code works in every UPI app (Google Pay, PhonePe, Paytm, BHIM) because they all read the same link format.</p>
+              <ul class="tags mono"><li>Python</li><li>qrcode</li><li>Regex validation</li><li>CLI</li></ul>
+              <div class="card__links">
+                <a class="btn btn--primary" href="https://github.com/Vidrant/UPI_Payment_QR_code_gennerator" target="_blank" rel="noopener">View repository <span class="btn__arr" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ §03 ARCHIVE ============ -->
+    <section class="section archive" id="archive">
+      <header class="section__head mono" data-reveal><span class="idx">§03</span><span>Archive</span></header>
+      <div class="archive__head">
+        <h2 class="display" data-reveal>Smaller experiments,<br><em>kept on the record.</em></h2>
+        <a class="link-arrow" href="https://github.com/Vidrant?tab=repositories" target="_blank" rel="noopener" data-reveal>All repositories on GitHub <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></a>
+      </div>
+
+      <ol class="index" data-index data-stagger>
+        <li><a class="index__row" href="https://vidrant.github.io/Tic-Tac-Toe/" target="_blank" rel="noopener" data-preview="ttt">
+          <span class="index__no mono">A.01</span>
+          <span class="index__name">Tic-Tac-Toe</span>
+          <span class="index__desc">A fully responsive game in plain HTML, CSS and JavaScript.</span>
+          <span class="index__stack mono">JS · CSS · HTML</span>
+          <span class="index__year mono">2025</span>
+          <span class="index__go mono">Play ↗</span>
+        </a></li>
+        <li><a class="index__row" href="https://vidrant.github.io/Hover-Card-effect/" target="_blank" rel="noopener" data-preview="cards">
+          <span class="index__no mono">A.02</span>
+          <span class="index__name">Hover Card Effect</span>
+          <span class="index__desc">Interactive cards with smooth, CSS-only content reveals.</span>
+          <span class="index__stack mono">CSS · HTML</span>
+          <span class="index__year mono">2025</span>
+          <span class="index__go mono">Live ↗</span>
+        </a></li>
+        <li><a class="index__row" href="https://github.com/Vidrant/MyFirstDockerApp" target="_blank" rel="noopener" data-preview="docker">
+          <span class="index__no mono">A.03</span>
+          <span class="index__name">My First Docker App</span>
+          <span class="index__desc">A first containerised Flask service: a python:3.10 image serving on port 5000.</span>
+          <span class="index__stack mono">Python · Docker</span>
+          <span class="index__year mono">2026</span>
+          <span class="index__go mono">Repo ↗</span>
+        </a></li>
+        <li><a class="index__row" href="https://github.com/Vidrant/GitPractical" target="_blank" rel="noopener" data-preview="git">
+          <span class="index__no mono">A.04</span>
+          <span class="index__name">Git Practical</span>
+          <span class="index__desc">Hands-on practice with branching, merging and pull requests.</span>
+          <span class="index__stack mono">Git · JS</span>
+          <span class="index__year mono">2026</span>
+          <span class="index__go mono">Repo ↗</span>
+        </a></li>
+        <li><a class="index__row" href="https://github.com/Vidrant/html-portfolio/tree/7b1afcb" target="_blank" rel="noopener" data-preview="html">
+          <span class="index__no mono">A.05</span>
+          <span class="index__name">HTML Portfolio v1</span>
+          <span class="index__desc">The first portfolio, written in plain HTML. This site replaced it in the same repo.</span>
+          <span class="index__stack mono">HTML</span>
+          <span class="index__year mono">2025</span>
+          <span class="index__go mono">v1 ↗</span>
+        </a></li>
+      </ol>
+
+      <!-- floating hover preview (desktop) -->
+      <div class="preview" data-previewer aria-hidden="true">
+        <svg data-p="ttt" viewBox="0 0 240 180"><g stroke="#EFEBE3" stroke-opacity=".35" stroke-width="2"><path d="M100 30v120M140 30v120M60 70h120M60 110h120"/></g><g fill="none" stroke-width="5" stroke-linecap="round"><path d="M68 38l24 24M92 38L68 62M108 118l24 24M132 118l-24 24" stroke="#EFEBE3"/><circle cx="160" cy="50" r="12" stroke="#FF4A1C"/><circle cx="120" cy="90" r="12" stroke="#FF4A1C"/><path d="M148 118l24 24M172 118l-24 24" stroke="#EFEBE3"/></g></svg>
+        <svg data-p="cards" viewBox="0 0 240 180"><rect x="40" y="48" width="56" height="84" rx="8" fill="#EFEBE3" fill-opacity=".12"/><rect x="144" y="48" width="56" height="84" rx="8" fill="#EFEBE3" fill-opacity=".12"/><rect x="90" y="30" width="60" height="96" rx="9" fill="#EFEBE3"/><rect x="100" y="96" width="40" height="5" rx="2.5" fill="#141412"/><rect x="100" y="106" width="26" height="5" rx="2.5" fill="#FF4A1C"/><rect x="100" y="42" width="40" height="40" rx="6" fill="#141412" fill-opacity=".15"/></svg>
+        <svg data-p="docker" viewBox="0 0 240 180"><g fill="#EFEBE3"><rect x="62" y="84" width="26" height="22" rx="3"/><rect x="92" y="84" width="26" height="22" rx="3"/><rect x="122" y="84" width="26" height="22" rx="3"/><rect x="92" y="58" width="26" height="22" rx="3" fill-opacity=".6"/><rect x="122" y="58" width="26" height="22" rx="3" fill-opacity=".6"/><rect x="122" y="32" width="26" height="22" rx="3" fill-opacity=".3"/></g><path d="M48 112h140c-6 22-30 38-70 38-40 0-62-16-70-38z" fill="none" stroke="#FF4A1C" stroke-width="3"/><text x="120" y="168" fill="#EFEBE3" fill-opacity=".5" font-family="monospace" font-size="11" text-anchor="middle">EXPOSE 5000</text></svg>
+        <svg data-p="git" viewBox="0 0 240 180"><g fill="none" stroke-width="3"><path d="M40 90h160" stroke="#EFEBE3" stroke-opacity=".5"/><path d="M80 90c20 0 20-40 40-40h20c20 0 20 40 40 40" stroke="#FF4A1C"/></g><g fill="#141412" stroke-width="3"><circle cx="50" cy="90" r="7" stroke="#EFEBE3"/><circle cx="80" cy="90" r="7" stroke="#EFEBE3"/><circle cx="120" cy="50" r="7" stroke="#FF4A1C"/><circle cx="150" cy="50" r="7" stroke="#FF4A1C"/><circle cx="180" cy="90" r="9" stroke="#EFEBE3" fill="#EFEBE3"/></g><text x="120" y="140" fill="#EFEBE3" fill-opacity=".5" font-family="monospace" font-size="11" text-anchor="middle">feature → main</text></svg>
+        <svg data-p="html" viewBox="0 0 240 180"><text x="120" y="108" fill="#EFEBE3" font-family="Georgia, serif" font-style="italic" font-size="64" text-anchor="middle">&lt;/&gt;</text><rect x="70" y="128" width="100" height="4" rx="2" fill="#FF4A1C"/></svg>
+      </div>
+    </section>
+
+    <!-- ============ §04 TOOLKIT (dark) ============ -->
+    <section class="section toolkit" id="toolkit" data-theme="dark">
+      <header class="section__head mono" data-reveal><span class="idx">§04</span><span>Toolkit</span></header>
+      <div class="toolkit__head">
+        <h2 class="display" data-reveal>The stack, <em>by weight.</em></h2>
+        <p class="toolkit__sub" data-reveal>What I reach for, and what my GitHub says I actually write.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+        <article class="tile tile--python">
+          <div class="tile__top"><span class="tile__label mono">Primary language</span><span class="tile__no mono">01</span></div>
+          <pre class="code mono" aria-label="Python code sample"><code><span class="k">import</span> pandas <span class="k">as</span> pd
+<span class="k">from</span> sklearn.ensemble <span class="k">import</span> IsolationForest
+
+df  = pd.read_csv(<span class="s">"upload.csv"</span>)
+num = df.select_dtypes(<span class="s">"number"</span>)
+iso = IsolationForest(contamination=<span class="n">0.02</span>)
+df[<span class="s">"anomaly"</span>] = iso.fit_predict(num) == <span class="n">-1</span></code></pre>
+          <h3 class="tile__title">Python</h3>
+        </article>
+
+        <article class="tile tile--ds">
+          <div class="tile__top"><span class="tile__label mono">Data science</span><span class="tile__no mono">02</span></div>
+          <ul class="chips"><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Matplotlib</li><li>Seaborn</li><li>Plotly</li><li>Jupyter</li></ul>
+        </article>
+
+        <article class="tile tile--ai">
+          <div class="tile__top"><span class="tile__label mono">AI / GenAI</span><span class="tile__no mono">03</span></div>
+          <ul class="chips"><li>LLMs</li><li>Prompt engineering</li><li>RAG</li><li>OpenAI API</li><li>Groq</li><li>Faster-Whisper</li></ul>
+        </article>
+
+        <article class="tile tile--web">
+          <div class="tile__top"><span class="tile__label mono">Web &amp; apps</span><span class="tile__no mono">04</span></div>
+          <ul class="chips"><li>FastAPI</li><li>Flask</li><li>Streamlit</li><li>React</li><li>Vite</li><li>HTML / CSS</li></ul>
+        </article>
+
+        <article class="tile tile--ops">
+          <div class="tile__top"><span class="tile__label mono">Ship &amp; observe</span><span class="tile__no mono">05</span></div>
+          <ul class="chips"><li>Git</li><li>GitHub Actions</li><li>Docker</li><li>pytest</li><li>Prometheus</li><li>Grafana</li></ul>
+        </article>
+
+        <article class="tile tile--lang">
+          <div class="tile__top"><span class="tile__label mono">Code on GitHub, by bytes</span><span class="tile__no mono">snapshot · Nov 2026</span></div>
+          <div class="langbar" role="img" aria-label="Python 74.2%, HTML 12.5%, CSS 7.8%, JavaScript 4.9%, Dockerfile 0.6%">
+            <span style="--w:74.2" class="l1"></span><span style="--w:12.5" class="l2"></span><span style="--w:7.8" class="l3"></span><span style="--w:4.9" class="l4"></span><span style="--w:0.6" class="l5"></span>
+          </div>
+          <ul class="langlegend mono">
+            <li><i class="l1"></i>Python <b>74.2%</b></li>
+            <li><i class="l2"></i>HTML <b>12.5%</b></li>
+            <li><i class="l3"></i>CSS <b>7.8%</b></li>
+            <li><i class="l4"></i>JavaScript <b>4.9%</b></li>
+            <li><i class="l5"></i>Dockerfile <b>0.6%</b></li>
+          </ul>
+        </article>
+
+        <article class="tile tile--sql">
+          <div class="tile__top"><span class="tile__label mono">Query</span><span class="tile__no mono">06</span></div>
+          <h3 class="tile__title">SQL</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ §05 RECORD ============ -->
+    <section class="section record" id="record">
+      <div class="record__grid">
+        <aside class="record__side">
+          <header class="section__head mono" data-reveal><span class="idx">§05</span><span>Record</span></header>
+          <h2 class="display" data-reveal>Paper <em>trail.</em></h2>
+          <p class="record__sub" data-reveal>A degree in progress, plus certificates from IBM, Google and IIT Madras. Every link opens the original credential.</p>
+        </aside>
+
+        <div class="record__main">
+          <h3 class="record__label mono" data-reveal>Education</h3>
+          <ol class="timeline" data-stagger>
+            <li><span class="mono">2024 — now</span><div><h4>B.E., Artificial Intelligence &amp; Data Science</h4><p>Mumbai University · Mumbai</p></div></li>
+            <li><span class="mono">2022 — 2024</span><div><h4>Junior College</h4><p>Patkar College · Mumbai</p></div></li>
+            <li><span class="mono">Before 2022</span><div><h4>High School</h4><p>Agarwal International School · Mumbai</p></div></li>
+          </ol>
+
+          <h3 class="record__label mono" data-reveal>Certificates</h3>
+          <ul class="certs" data-stagger>
+            <li><a href="https://courses.cognitiveclass.ai/certificates/0450008031fa40dd8bcfd521ddd5f2fe" target="_blank" rel="noopener"><span class="certs__name">Python for Data Science</span><span class="certs__org mono">IBM</span><span class="certs__go mono">Verify ↗</span></a></li>
+            <li><a href="https://www.credly.com/badges/e363002e-6846-441b-994a-db916d60f9bb/public_url" target="_blank" rel="noopener"><span class="certs__name">AI Essentials</span><span class="certs__org mono">Google</span><span class="certs__go mono">Verify ↗</span></a></li>
+            <li><a href="https://www.credly.com/badges/fc30298b-e7fa-4234-bc50-e390bf8f464b/public_url" target="_blank" rel="noopener"><span class="certs__name">Prompting Essentials</span><span class="certs__org mono">Google</span><span class="certs__go mono">Verify ↗</span></a></li>
+            <li><a href="https://ik.imagekit.io/7jagqudsj/NPTEL%20PYTHON%20CERTIFICATE.pdf?updatedAt=1757661653564" target="_blank" rel="noopener"><span class="certs__name">The Joy of Computing using Python</span><span class="certs__org mono">IIT Madras · NPTEL</span><span class="certs__go mono">Verify ↗</span></a></li>
+            <li><div class="certs__pending"><span class="certs__name">Oracle AI Foundations Associate</span><span class="certs__org mono">Oracle</span><span class="certs__go mono"><i></i>In progress</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ §06 CONTACT ============ -->
+    <section class="contact" id="contact">
+      <p class="mono contact__idx" data-reveal>§06 — Contact</p>
+      <h2 class="contact__title" data-reveal>Got a dataset that<br><em>needs a second look?</em></h2>
+      <p class="contact__sub" data-reveal>Internships, collaborations or a half-formed project idea. My inbox is open.</p>
+      <div class="contact__mail" data-reveal>
+        <a href="mailto:rohitbaid0101@gmail.com">rohitbaid0101@gmail.com</a>
+        <button class="copy mono" type="button" data-copy="rohitbaid0101@gmail.com">Copy</button>
+      </div>
+      <ul class="contact__links mono" data-stagger>
+        <li><a href="https://www.linkedin.com/in/rohit-baid-a5446330a" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="https://github.com/Vidrant" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="assets/Rohit_Baid_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© 2026 Rohit Baid</span>
+    <span>Mumbai, India · <span data-time>--:--</span></span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
-
-
-
-
