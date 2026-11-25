@@ -154,15 +154,19 @@
           <div class="card__meta">
             <div class="card__head">
               <span class="card__no mono">02 / 04 — voice assistant</span>
-              <h3 class="card__title">AI Virtual <em>Assistant</em></h3>
+              <!-- Links sit under the title (in the head's empty space) so this card stays the same height as the others -->
+              <div>
+                <h3 class="card__title">AI Virtual <em>Assistant</em></h3>
+                <div class="card__links">
+                  <a class="btn btn--primary" href="https://ai-assistant-six-iota.vercel.app/" target="_blank" rel="noopener">Open live app <span class="btn__arr" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></span></a>
+                  <a class="link-arrow" href="https://github.com/Vidrant/Virtual_AI_Assistant" target="_blank" rel="noopener">Source <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></a>
+                </div>
+              </div>
             </div>
             <div class="card__body">
-              <p class="card__desc">A conversational assistant you can talk to. Groq-powered answers, live web search, date and time lookups and sandboxed maths, with local Whisper speech-to-text in and browser text-to-speech out. One command starts it, and each session keeps its own history.</p>
-              <ul class="tags mono"><li>Python</li><li>FastAPI</li><li>React</li><li>Vite</li><li>Groq API</li><li>Faster-Whisper</li><li>RAG</li></ul>
-              <div class="card__links">
-                <a class="btn btn--primary" href="https://ai-assistant-six-iota.vercel.app/" target="_blank" rel="noopener">Open live app <span class="btn__arr" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6"/></svg></span></a>
-              </div>
-              <p class="card__aside mono">Source available on request</p>
+              <p class="card__desc">A conversational assistant you can talk to. Groq-powered answers, live web search, date and time lookups and sandboxed maths, with Whisper speech-to-text in (local, or Groq-hosted in the live demo) and browser text-to-speech out. One command starts it, and each session keeps its own history.</p>
+              <ul class="tags mono"><li>Python</li><li>FastAPI</li><li>React</li><li>Vite</li><li>Groq API</li><li>Faster-Whisper</li></ul>
+              <p class="card__aside mono">Free hosting · first load can take a minute to wake up</p>
             </div>
           </div>
           <div class="card__visual">
