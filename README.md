@@ -8,7 +8,7 @@ The hero borrows its idea from the [Smart Data Analyst](https://github.com/Vidra
 
 ## Live site
 
-**[vidrant.github.io/html-portfolio](https://vidrant.github.io/html-portfolio/)**
+**[vidrant.github.io/Portfolio](https://vidrant.github.io/Portfolio/)**
 
 Move your mouse across the hero to query the field, then scroll. On phones, just scroll: the field fits into the space above the name.
 
